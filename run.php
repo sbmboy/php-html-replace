@@ -6,10 +6,10 @@
  * 本文件需要服务器授权较高,如果遇到permission denied,说明权限受限,请自行解决权限问题
 */
 set_time_limit(0);
-global $fromstr,$tostr;
 $fromstr='google';
 $tostr='baidu';
 function listDir($dir){
+	global $fromstr,$tostr;
 	if(is_dir($dir)){
 		if ($dh = opendir($dir)) {
 			while (($file = readdir($dh)) !== false){
